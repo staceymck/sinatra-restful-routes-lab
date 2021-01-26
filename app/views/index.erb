@@ -1,0 +1,12 @@
+<h1>All Recipes</h1>
+
+<% if !@recipes.empty? %>
+  <% @recipes.each do |recipe| %>
+    <%= recipe.name %><br>
+    <%= recipe.ingredients %><br>
+    <%= recipe.cook_time %>
+    <a href="/recipes/<%=recipe.id%>">View Page</a>
+    <% end %>
+<% else %>
+  <p>No recipes listed yet</p>
+<% end %>
